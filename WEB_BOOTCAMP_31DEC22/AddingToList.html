@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ 
+</head>
+<body>
+ <form id="listForm">
+  <input name="username" type='text' placeholder="Username"></input>
+  <input name="Item" placeholder="Item"></input>
+   <button type="Submit">Submit</button>
+ </form>
+ <ul id="listContainer">
+ </ul>
+ <script>
+  const form_ele = document.getElementById("listForm");
+  console.log(form_ele);
+  form_ele.addEventListener('submit',function(e) {
+   console.log('coming inside function');
+     e.preventDefault();
+     const newEle = document.createElement('li');
+     newEle.innerText = this.elements.username.value;
+     document.getElementById('listContainer').append(newEle);   
+  });
+ </script>
+</body>
+</html>
