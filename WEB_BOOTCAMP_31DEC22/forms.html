@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form action="about.html">
+      <input type="button" value="Click Me!!" />
+      <div>
+        <label for="username">Enter The Username:</label>
+        <input type="text" name="username" id="username" placeholder="Name" />
+      </div>
+      <br />
+      <div>
+        <label for="password">Enter the Password:</label>
+        <input
+          id="password"
+          name="password"
+          pattern="[a-z]{1,3}"
+          title="Should contain atleast a lowercase letter"
+          required
+        />
+      </div>
+      <br />
+      <button type="button">In The Middle Does Nothing</button>
+      <div>
+        <label for="email">Enter Your Email:</label>
+        <input type="text" name="email" id="email" placeholder="Email" />
+      </div>
+      <button>Submit</button>
+      <!--By default Submits the form  -->
+      <!--http://localhost:5500/about.html?username=&password=&email=&xs=on&s=on-->
+      <!--<label for="xs">xs</label>
+      <input type="checkbox" name="xs" id="xs" />
+      <label for="s">s</label>
+      <input type="checkbox" name="s" id="s" />
+      <label for="l">l</label>
+      <input type="checkbox" name="l" id="l" />-->
+
+      <!--http://localhost:5500/about.html?username=&password=&email=&xs=Extrasmall-->
+      <input type="radio" name="size" id="xs" value="Extrasmall" />
+      <label for="xs">xs</label>
+      <input type="radio" name="size" id="s" value="Small" />
+      <label name="s">s</label>
+      <input type="radio" name="size" id="l" value="Large" />
+      <label for="l">l</label>
+      <p>
+        <label for="meal">Please select an entree</label>
+        <select name="meal" id="meal">
+          <option value="meal1">Meal1</option>
+          <option value="meal2">Meal2</option>
+          <option value="meal3">Meal3</option>
+        </select>
+      </p>
+      <label for="waterfall">Waterfall</label>
+      <input
+        type="range"
+        min="1"
+        max="100"
+        step="7"
+        value="75"
+        id="waterfall"
+        name="water"
+      />
+      <textarea
+        name="text"
+        rows="2"
+        cols="2"
+        placeholder="Please Enter The text"
+      ></textarea>
+    </form>
+    <button>Button Outside form</button>
+  </body>
+</html>

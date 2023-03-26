@@ -1,0 +1,155 @@
+header > nav {
+  color: red !important;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Bubble_3.jpg');
+}
+aside {
+  color: pink;
+  text-align: right;
+  text-decoration: #ffc8d3 underline wavy;
+  text-shadow: #9135ce 10px;
+  line-height: 40px;
+  font-weight: 300%;
+}
+main {
+  color: blue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+h2 {
+  color: yellow;
+}
+p sup {
+  color: green;
+}
+input + button {
+  background-color: red;
+}
+p > sup {
+  color: red;
+}
+a[href*='com'] {
+  color: magen;
+}
+a[href$='org'] {
+  color: red;
+}
+p:nth-of-type(2n) {
+  color: grey;
+}
+/*Pseudo classes*/
+p::first-letter {
+  color: red;
+}
+li:nth-of-type(2n) {
+  color: pink;
+}
+
+/*Specificity 
+Inline Styles
+Ids
+classes,attributes,pseudo-classes
+Elements, Pseusdo elements
+
+*/
+
+/*
+css inherits, elements inherits its properly from closest parent style 
+
+*/
+
+/*
+inline: width,height ignored; padding,margin at left right works
+inline-block : all padding ,margin respected.
+block:elements in new lines  all padding margins respected.
+*/
+
+/*
+-->font size in "em" is multipliaction factor with respect to parent elements font size
+-->margin in em is relative to the font size
+*/
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  position: static;
+  top: 5px;
+  background-color: rgb(22, 124, 213, 0.4);
+  display: inline-block;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 5px;
+  background-color: rgb(22, 124, 213, 0.4);
+  display: inline-block;
+}
+
+.position1 .box3 {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 10px;
+  background-color: rgb(22, 124, 213, 1);
+  display: inline-block;
+}
+.position1 .box4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 60px;
+  background-color: rgb(213, 130, 22);
+  display: inline-block;
+}
+.position .box5 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: 60px;
+  background-color: rgb(213, 130, 22);
+  display: inline-block;
+}
+.position .box6 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: 60px;
+  background-color: rgb(213, 130, 22);
+  display: inline-block;
+  transform: translate(40px, 50px) skewx() scale(1.5);
+}
+
+.box7 {
+  position: sticky;
+  width: 100%;
+  height: 50px;
+  top: 10px;
+
+  background-color: rgb(22, 213, 47);
+  transition: background-color 1s ease-in-out 1s;
+  /*property transtime timerfunc delay*/
+  /* display: inline-block; */
+}
+.box7:hover {
+  background-color: red;
+}
+/*
+static  --normal flow ,but top and all doesnot work
+relative--normal document flow, top and all can be used to change the position
+absolute--out of document flow,relative to relative,fixed,absoulte,sticky parent element
+fixed---out of document flow, relative to view port
+sticky --relative to fixed,relative at first when viewport reaches to element ,it gets fixed.
+1)If the position property is static, relative, or sticky, the containing block is formed by the edge of the content box of the nearest ancestor element that is either a block container (such as an inline-block, block, or list-item element) or establishes a formatting context (such as a table container, flex container, grid container, or the block container itself).
+2)If the position property is absolute, the containing block is formed by the edge of the padding box of the nearest ancestor element that has a position value other than static (fixed, absolute, relative, or sticky).
+3)If the position property is fixed, the containing block is established by the viewport (in the case of continuous media) or the page area (in the case of paged media).
+4)If the position property is absolute or fixed, the containing block may also be formed by the edge of the padding box of the nearest ancestor element that has the following:
+  a) A transform or perspective value other than none
+  b) A will-change value of transform or perspective
+  c) A filter value other than none or a will-change value of filter (only works on Firefox).
+  d) A contain value of paint (e.g. contain: paint;)
+  e) A backdrop-filter other than none (e.g. backdrop-filter: blur(10px)
+
+
+*/

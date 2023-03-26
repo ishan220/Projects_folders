@@ -1,0 +1,33 @@
+.flex-container {
+  height: 500px;
+  width: 1000px;
+  display: flex;
+  background-color: aqua;
+  flex-direction: row;
+  justify-content: space-evenly; /*main axis alignment*/
+  align-items: center; /* cross axis alignment*/
+  flex-wrap: wrap; /*determines cross exis*/
+}
+
+.flex-container div:nth-of-type(n) {
+  height: 100px;
+  width: 50px;
+  background-color: blueviolet;
+  /*flex-basis: 300px;*/ /*initial size of container*/
+}
+
+.flex-container div:nth-of-type(2n) {
+  height: 100px;
+  width: 250px;
+  /* flex-grow: 2;*/
+  /*growth of element relative to other elemets when space available to grow*/
+  flex-shrink: 2; /*shrinkness of element relative to other elemets when space is space is reduced /container size is less what it can accomodate*/
+  background-color: rgb(43, 226, 131);
+  /* align-self: flex-end; applies to individual elements */
+}
+
+@media (min-width: 600px) {
+  .flex-container {
+    background-color: 'red';
+  }
+}
