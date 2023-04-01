@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\Java Script Tutorials"
+	},
+	{
+		"path": "..\\.."
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true,
+    "liveServer.settings.multiRootWorkspaceName": "WEB_BOOTCAMP_31DEC22",
+    "editor.formatOnSave": true
+  }
+}
